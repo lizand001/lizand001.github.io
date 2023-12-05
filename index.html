@@ -216,8 +216,38 @@
 </form>
 
 
+<!--codigo a firebase conexion-->
+
+<script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.0/firebase-app.js";
+  import { getDatabase, ref, push, onValue, remove } from "https://www.gstatic.com/firebasejs/10.7.0/firebase-database.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  const firebaseConfig = {
+    apiKey: "AIzaSyCYUDOJBs53S9OCZAKz039nIm9bkGrRy6o",
+    authDomain: "glowing-anagram-405918.firebaseapp.com",
+    databaseURL: "https://glowing-anagram-405918-default-rtdb.firebaseio.com",
+    projectId: "glowing-anagram-405918",
+    storageBucket: "glowing-anagram-405918.appspot.com",
+    messagingSenderId: "986805759900",
+    appId: "1:986805759900:web:093e2e93a49aca71976259"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const database = getDatabase(app);
 
 
+  window.crearRegistro = function(){
+    const nombre = document.getElementById("nombre").value;
+    const edad = document.getElementById("edad").value;
+
+    console.log(nombre,edad);
+  }
+</script>
 
 
 
